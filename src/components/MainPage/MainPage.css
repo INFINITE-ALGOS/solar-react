@@ -1,0 +1,252 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+/* Reset some default styles */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-page {
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e30613;
+}
+
+.header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+
+.banner h1 {
+    color: #fff;
+    font-size: 48px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner {
+    position: relative;
+    background-image: url('https://img.freepik.com/free-vector/ecology-green-energy-concept-with-solar-panels-wind-turbines-installed-green-field-realistic-vector-illustration_1284-84906.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.content-section {
+    padding: 40px 20px;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* src/components/MainPage/MainPage.css */
+
+.product-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .product-container {
+    display: flex;
+    justify-content: space-between; /* Space evenly between products */
+    flex-wrap: nowrap; /* Prevent wrapping to keep items in a single line */
+    align-items: flex-start;
+    gap: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product-card {
+      width: 80%; /* Adjust this value for smaller screens */
+      margin: 0 auto; /* Center product cards on small screens */
+    }
+  }
+
+  /* src/components/MainPage/MainPage.css */
+
+/* src/components/MainPage/MainPage.css */
+
+.services-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjusted for better spacing */
+    margin-top: 20px;
+  }
+  
+  .service-card {
+    flex: 1 1 28%; /* Increased the flex basis percentage */
+    max-width: 28%; /* Increased the max-width percentage */
+    min-width: 300px; /* Increased the minimum width */
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .service-image {
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Increased the height */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .service-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.3em; /* Increased font size slightly */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .services-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-card {
+      max-width: 90%; /* Increased max-width for smaller screens */
+      margin-bottom: 20px;
+      
+    }
+  
+    .service-image {
+      height: 400px; /* Adjusted height for smaller screens */
+    }
+  }
+  
+  .reviews-section {
+    padding: 60px 20px;
+    background-color: #fcfafd;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .reviews-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .review-card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    min-height: 250px;
+  }
+  
+  .review-card .quote {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .review-card .reviewer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .review-card .reviewer-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .review-card .reviewer-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .review-card .reviewer-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .review-card .review-rating {
+    font-size: 1.2em;
+    color: #ff9800;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .slick-arrow {
+    background-color: #fff !important;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    opacity: 0.8;
+    border: 1px solid #ccc;
+  }
+  
+  .slick-arrow:hover {
+    opacity: 1;
+  }
+  
+  .slick-prev {
+    left: -40px;
+  }
+  
+  .slick-next {
+    right: -40px;
+  }

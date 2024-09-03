@@ -1,0 +1,110 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-image: url('https://img.freepik.com/free-vector/ecologycal-energy-cartoon-poster-with-solar-power-panels-field-retro-style_1284-7665.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* Add padding to the top */
+    padding-bottom: 80px; /* Add padding to the bottom */
+}
+
+.signup-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.5); White overlay with 50% opacity */
+    z-index: 1;
+}
+
+.signup-form {
+    background-color: rgba(71, 57, 57, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    z-index: 2;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fffafa;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #fffafa;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Modified button styles */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style for the verification dialog */
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.dialog.show {
+    display: block;
+}
+
+.dialog button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dialog button:hover {
+    background-color: #2980b9;
+}
