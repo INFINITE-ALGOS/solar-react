@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise');
 const bcrypt = require('bcryptjs');
-//
+
 const app = express();
 app.use(express.json());
 app.use(cors());  
@@ -42,17 +42,17 @@ async function connectToMySQL() {
 
   
 
-  async function registerUser(name, email, password) {
+  async function registerUser(name, email, password,type,phone_number) {
     const conn = await connectToMySQL();
     try {
       // Check if any parameter is undefined
-      if (!name || !email || !password) {
-        throw new Error('Username, email, and password are required');
+      if (!name || !email || !password || !type || !phone_number) {
+        throw new Error('Username, email, password,type,phone are required');
       }
   
       const [results] = await conn.execute(
-        'INSERT INTO users (name, email, password) VALUES (?, ?, ?)',
-        [name, email, await bcrypt.hash(password, 10)]
+        'INSERT INTO users (name, email, password,type,phone_number) VALUES (?, ?, ?,?,?)',
+        [name, email, await bcrypt.hash(password, 10),type,phone_number]
       );
       return { success: true, userId: results.insertId };
     } catch (error) {
@@ -88,9 +88,9 @@ async function loginUser(email, password) {
 }
 
 app.post('/api/signup', async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password,type,phone} = req.body;
   try {
-    const result = await registerUser(name, email, password);
+    const result = await registerUser(name, email, password,type,phone);
     res.status(201).json(result);
   } catch (error) {
     res.status(500).json({ error: 'Registration failed' });
@@ -98,7 +98,7 @@ app.post('/api/signup', async (req, res) => {
 });
 
 app.post('/api/login', async (req, res) => { // /login
-  const { email, password,} = req.body;
+  const { email, password} = req.body;
   const user = await loginUser(email, password);
   if (!user) {
     res.status(401).json({ error: 'Invalid   credentials' });

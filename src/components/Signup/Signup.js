@@ -27,7 +27,8 @@ function Signup() {
                 name,
                 email,
                 password,
-                
+                type,
+                phone
             });
             
             if (response.data.success) {
@@ -98,10 +99,10 @@ function Signup() {
                         required
                     >
                         <option value="">Please select TYPE</option>
-                        <option value="internal teams">Customer</option>
-                        <option value="admin">Supplier</option>
-                        <option value="supplier">Internal Teams</option>
-                        <option value="customer">Admin</option>
+                        <option value="customer">Customer</option>
+                        <option value="supplier">Supplier</option>
+                        <option value="internal_teams">Internal Teams</option>
+                        <option value="admin">Admin</option>
                     </select>
                 </div>
                 <div className="form-group">
