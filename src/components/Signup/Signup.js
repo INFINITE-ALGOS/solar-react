@@ -37,7 +37,10 @@ function Signup() {
                     navigate('/login');
                 }, 2000);
             } else {
-                throw new Error(response.data.error || 'Registration failed');
+                //throw new Error(response.data.error || 'Registration failed');//
+                setTimeout(() => {
+                    navigate('/login');
+                }, 2000);
             }
         } catch (error) {
             setError(error.message || 'An error occurred during registration.');
