@@ -298,6 +298,11 @@
       }
   }
   
+
+
+
+
+  
   // Endpoint to login
   app.post('/api/login', async (req, res) => {
       const { email, password } = req.body;
@@ -312,6 +317,44 @@
           res.status(500).json({ error: error.message });
       }
   });
+
+
+
+
+
+
+  
+
+//   app.post('/api/upload-product', async (req, res) => {
+//     const file = req.files.image;
+//     if (!file) return res.status(400).json({ error: 'No file uploaded' });
+  
+//     try {
+//       const result = await cloudinary.uploader.upload(file.path);
+      
+//       const product = {
+//         id: generateUniqueId(),
+//         name: file.originalname.split('.')[0],
+//         imageId: result.public_id,
+//         specification: `${file.size / 1024 / 1024.toFixed(2)} MB`
+//       };
+  
+//       // Save the product to your database
+//       await saveProductToDatabase(product);
+  
+//       res.json(product);
+//     } catch (error) {
+//       console.error('Error uploading product:', error);
+//       res.status(500).json({ error: 'Failed to upload product' });
+//     }
+//   });
+  
+
+
+
+
+
+
   
   app.listen(5000, () => console.log('Server running on port 5000'));
   
