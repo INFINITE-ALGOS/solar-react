@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## NodeModules.rar
+
+DECOMPRESS THE NODEMODULES.RAR BEFORE RUNNING 'npm start' in local rep.
+
 ### `npm start`
 
 Runs the app in the development mode.\
