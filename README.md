@@ -4,12 +4,30 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### `npm start`
+
+From package.json creates nodemodules folder by downloading the mentioned dependencies
+
+OR 
+
 In the project directory, you can run:
+
+## NodeModules.rar
+
+DECOMPRESS THE NODEMODULES.RAR BEFORE RUNNING 'npm start' in local rep.
+
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `node server.js`
+
+Runs the backend server for the app on PORT 5000.\
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
