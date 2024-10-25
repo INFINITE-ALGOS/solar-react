@@ -20,7 +20,7 @@ function Login() {
                 email,
                 password
             });
-//entry into anothers endpoint must not be allowed  
+//entry into anothers endpoint must not be allowed(not added yet)  
             if (response.data) {//this should be if the login PERSON IS SUPPLIER, TRAVERSE TO SUPPLIERPAGE, ETC.
                 localStorage.setItem('token', response.data.token); // Store token locally
                 if (response.data.type==='supplier')
