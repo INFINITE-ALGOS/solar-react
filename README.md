@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `npm start`
 
-From package.json creates nodemodules folder by downloading the mentioned dependencies
+From package.json creates nodemodules folder by downloading the mentioned dependencies and opens the webpage at localhost:3000
 
 OR 
 
@@ -19,6 +19,8 @@ DECOMPRESS THE NODEMODULES.RAR BEFORE RUNNING 'npm start' in local rep. [this fi
 
 ### `npm start`
 
+Traverse to the /solar-react, then run 'npm start' to start the frontend.
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -26,6 +28,10 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### `node server.js`
+
+Open MySQL Workbench and execute the commands written in 'backend.sql' file in /solar-react/src/backend/backend.sql in one go. It would create DB and users table [NOT product table, or order table yet]
+
+Traverse to /solar-react/src/backend and run 'node server.js'
 
 Runs the backend server for the app on PORT 5000.\
 
