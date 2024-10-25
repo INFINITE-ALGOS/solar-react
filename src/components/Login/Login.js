@@ -20,10 +20,13 @@ function Login() {
                 email,
                 password
             });
-
-            if (response.data) {
+//entry into anothers endpoint must not be allowed  
+            if (response.data) {//this should be if the login PERSON IS SUPPLIER, TRAVERSE TO SUPPLIERPAGE, ETC.
                 localStorage.setItem('token', response.data.token); // Store token locally
-                navigate('/main');
+                if (response.data.type==='supplier')
+                {navigate('/SuppliersPage');}
+                else
+                {navigate('/');}
             } else {
                 throw new Error('Invalid credentials');
             }
