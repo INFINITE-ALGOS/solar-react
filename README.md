@@ -14,7 +14,7 @@ In the project directory, you can run:
 
 ## NodeModules.rar
 
-DECOMPRESS THE NODEMODULES.RAR BEFORE RUNNING 'npm start' in local rep.
+DECOMPRESS THE NODEMODULES.RAR BEFORE RUNNING 'npm start' in local rep. [this file can be deleted as 'npm start' would create 'NodeModules.rar' automatically]{recommended to be deleted}
 
 
 ### `npm start`
